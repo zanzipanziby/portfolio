@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "./MySkills.module.css"
+import s from "./MySkills.module.scss"
 import {Skill} from "./Skill/Skill";
 import {AiFillHtml5} from "react-icons/ai";
 import {AiOutlineCloudServer} from "react-icons/ai";
@@ -8,6 +8,7 @@ import {FaReact} from "react-icons/fa";
 import {VscDebugAll} from "react-icons/vsc";
 import {SiRedux} from "react-icons/si";
 import {BsGit} from "react-icons/bs";
+import {Title} from "../Title/Title";
 
 
 
@@ -21,8 +22,8 @@ type SkillType = {
 
 export const MySkills = () => {
     const mySkills: SkillType[] = [
-        {id:'1', title: "Html", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", icon:<AiFillHtml5/>},
-        {id:'2', title: "Css", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", icon:<DiCss3/>},
+        {id:'1', title: "HTML", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", icon:<AiFillHtml5/>},
+        {id:'2', title: "CSS", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", icon:<DiCss3/>},
         {id:'3', title: "JavaScript/TypeScript", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", icon:<DiJavascript1/>},
         {id:'4', title: "React", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", icon:<FaReact/>},
         {id:'5', title: "Redux", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit." , icon:<SiRedux/>},
@@ -35,8 +36,15 @@ export const MySkills = () => {
         return <Skill key={s.id} icon={s.icon} title={s.title} description={s.description}/>
     })
     return (
-        <div className={s.mySkillsContainer}>
-            {mySkillsRender}
+
+        <div className={s.mySkillsWrapper}>
+
+            <div className={s.contentContainer}>
+                <Title title={"My Skills"} titleRepeat={"Skills"}/>
+                <div className={s.mySkillsContainer}>
+                    {mySkillsRender}
+                </div>
+            </div>
         </div>
     );
 };

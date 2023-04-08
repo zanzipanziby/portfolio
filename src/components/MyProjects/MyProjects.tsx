@@ -1,8 +1,9 @@
 import React from 'react';
 import {Project} from "./Project/Project";
-import s from "./MyProjects.module.css"
+import s from "./MyProjects.module.scss"
 import todo from '../../assets/jpg/projects/Todo.jpg'
 import social from '../../assets/jpg/projects/socialNetwork.png'
+import {Title} from "../Title/Title";
 
 
 type MyProjectType = {
@@ -12,7 +13,7 @@ type MyProjectType = {
     background: string
 }
 export const MyProjects = () => {
-    const myProjects = [
+    const myProjects: MyProjectType[] = [
         {
             id: "1",
             title: "Todolist",
@@ -34,13 +35,17 @@ export const MyProjects = () => {
                 title={p.title}
                 description={p.description}
                 background={p.background}
-
             />)
     })
 
     return (
-        <div className={s.myProjectsContainer}>
-            {myProjectRender}
+        <div className={s.myProjectsWrapper}>
+            <div className={s.contentContainer}>
+                <Title title={"My Projects"} titleRepeat={"Projects"}/>
+                <div className={s.myProjectsContainer}>
+                    {myProjectRender}
+                </div>
+            </div>
         </div>
     );
 };

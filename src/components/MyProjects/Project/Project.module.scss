@@ -1,0 +1,57 @@
+@import '../../../common/style/variables';
+
+
+.projectWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: $bgColorPrimary;
+  margin-bottom: 2em;
+
+  .projectLogoContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .shading {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .projectLink {
+      display: block;
+      font-weight: 600;
+      background-color: rgba(16, 16, 16, 0.67);
+      padding: 1em 3em;
+      border-radius: 2em;
+      z-index: 1;
+
+      &:hover {
+        color: $textColorSecondary;
+      }
+    }
+  }
+
+  .projectDescriptionContainer {
+    text-align: center;
+    padding: 1em;
+  }
+}
+
+
+
+
+
+
+
+
+
+

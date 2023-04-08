@@ -1,0 +1,15 @@
+@import "variables";
+
+@mixin container() {
+  max-width: 80%;
+  margin: 0 auto;
+  @media screen and (max-width: $mediaWidthMobile) {
+    max-width: 98%;
+  }
+}
+
+
+@mixin pageBg($bgColor) {
+  width: 100%;
+  background-color: $bgColor;
+}

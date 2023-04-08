@@ -1,0 +1,21 @@
+@import "../../../common/style/variables";
+@import "../../../common/style/mixins";
+
+.skillWrapper{
+    display: flex;
+
+    margin-bottom: 2em;
+    padding: 2em 2em;
+    min-width: 360px;
+    width: 35vw;
+    background-color: $bgColorSecondary;
+    @media screen and (max-width: $mediaWidthSkillsAndMenu){
+        width: 80vw;
+    }
+}
+.iconContainer {
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    color: $textColorSecondary;
+}

@@ -1,0 +1,12 @@
+@import '../../style/variables';
+
+
+
+.photoContainer {
+  background-image: url("../../../assets/jpg/Photo2.png");
+  min-height: 400px;
+  min-width: 360px;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,42 @@
+@import '../../../common/style/variables';
+
+.form {
+  display: flex;
+  width: 70vw;
+  flex-direction: column;
+  background: #e0dddd;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: $mediaWidthSkillsAndMenu) {
+    width: 100%;
+  }
+  padding: 3em 2em;  input, textarea {
+    width: 100%;
+    margin: 1em;
+    padding: .5em;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+  };
+  textarea {
+    resize: none;
+    overflow: auto;
+    height: 5em;
+  }
+  button {
+    background-color: $textColorSecondary;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    padding: .5em 1em;
+
+    border-radius: 3em;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    &:hover {
+      background-color: $bgColorSecondary;
+      border: 2px solid $textColorSecondary ;
+      color: $textColorSecondary;
+      outline: none;
+    }
+  }
+}

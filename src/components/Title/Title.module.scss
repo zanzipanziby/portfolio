@@ -1,0 +1,24 @@
+@import "../../common/style/variables";
+@import "../../common/style/mixins";
+
+.pageTitleContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6em;
+  .title {
+    font-size: 3em;
+  }
+  .titleRepeat {
+    position: absolute;
+    font-size: 7em;
+    opacity: .1;
+    bottom: 0;
+    font-weight: 900;
+  }
+  @media screen and (max-width: $mediaWidthSkillsAndMenu) {
+    font-size: .5em;
+  }
+}

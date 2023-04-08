@@ -1,0 +1,66 @@
+@import "../../common/style/mixins";
+@import "../../common/style/variables";
+
+.navContainer {
+  background-color: rgba(0, 0, 0, 0.78);
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  .contentContainer {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+
+    .nav {
+      display: flex;
+      @media screen and (max-width: $mediaWidthSkillsAndMenu) {
+        display: none;
+      }
+
+      & li {
+        margin: 1em 3em 1em 0;
+
+        & a:hover {
+          border-bottom: 2px solid #ffbd39;
+        }
+
+        & a:active {
+          color: #ffbd39;
+        }
+      }
+    }
+    .burgerNav{
+      display: flex;
+      flex-direction: column;
+    }
+    .burger{
+      display: none;
+      @media screen and (max-width: $mediaWidthSkillsAndMenu) {
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        margin: 1em 3em 1em 0;
+        cursor: pointer;
+        &:active{
+          color: $textColorSecondary;
+      }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

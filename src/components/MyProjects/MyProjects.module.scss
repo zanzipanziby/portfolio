@@ -1,0 +1,27 @@
+@import "../../common/style/variables";
+@import "../../common/style/mixins";
+
+
+.myProjectsWrapper {
+  @include pageBg($bgColorSecondary);
+
+  .contentContainer {
+    @include container();
+
+    .myProjectsContainer {
+      padding: 3em 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @media screen and (max-width: $mediaWidthProjectsPage) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+      }
+
+    }
+  }
+}
+
+

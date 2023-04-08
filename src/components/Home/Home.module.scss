@@ -1,0 +1,71 @@
+@import "../../common/style/variables";
+@import "../../common/style/mixins";
+
+
+.home {
+  @include pageBg($bgColorSecondary);
+
+  .contentContainer {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .mainTextContainer {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url("../../assets/jpg/Photo.png");
+      background-size: contain;
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      font-size: 2.5em;
+      text-shadow: 1px 1px 10px $bgColorPrimary;
+      @media screen and (max-width: $mediaWidthSkillsAndMenu) {
+        background-size: 500px;
+        min-height: 640px;
+        font-size: 1.5em;
+      }
+      @media screen and (max-width: $mediaWidthMobile) {
+        justify-content: start;
+        font-size: 1em;
+        padding-top: 2.5em;
+        background-size: 400px;
+        background-position: bottom;
+      }
+
+      .hello {
+
+        color: $textColorSecondary;
+        background-image: $bgColorPrimary;
+      }
+
+      .mainTitle {
+        width: 50%;
+        line-height: 1.2;
+        margin: .2em 0;
+        @media screen and (max-width: $mediaWidthMobile) {
+          width: 100%;
+        }
+
+
+        & span {
+          color: $textColorSecondary;
+        }
+
+      }
+
+      .description {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+
+
+
+

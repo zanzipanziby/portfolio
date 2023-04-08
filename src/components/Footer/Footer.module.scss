@@ -1,0 +1,19 @@
+@import "../../common/style/mixins";
+@import "../../common/style/variables";
+
+.pageWrapper {
+  @include pageBg($bgColorSecondary);
+
+  .contentContainer {
+    @include container();
+
+    .footer {
+      padding: 3em 0;
+
+      p {
+        text-align: center;
+      }
+
+    }
+  }
+}
