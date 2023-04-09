@@ -11,6 +11,7 @@ type MyProjectType = {
     title: string
     description: string
     background: string
+    link: string
 }
 export const MyProjects = () => {
     const myProjects: MyProjectType[] = [
@@ -18,13 +19,15 @@ export const MyProjects = () => {
             id: "1",
             title: "Todolist",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-            background: todo
+            background: todo,
+            link:"https://zanzipanziby.github.io/todolist-redux-handmade"
         },
         {
             id: "2",
             title: "Social-network",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-            background: social
+            background: social,
+            link:"https://zanzipanziby.github.io/samurai-way-again"
         },
     ];
 
@@ -35,6 +38,7 @@ export const MyProjects = () => {
                 title={p.title}
                 description={p.description}
                 background={p.background}
+                link={p.link}
             />)
     })
 

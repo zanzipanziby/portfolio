@@ -5,10 +5,11 @@ type ProjectPropsType = {
     title: string
     description: string
     background: string
+    link: string
 }
 
 export const Project = (props: ProjectPropsType) => {
-    const [isVisible,setIsVisible] = useState(false)
+    const [isVisible, setIsVisible] = useState(false)
 
     const onMouseEnterHandler = () => {
         setIsVisible(true)
@@ -22,7 +23,13 @@ export const Project = (props: ProjectPropsType) => {
         <div className={s.projectWrapper}>
             <div className={s.projectLogoContainer} style={{backgroundImage: `url(${props.background})`}}>
                 {isVisible && <div className={s.shading}></div>}
-                <a className={s.projectLink} href="#" onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}>
+                <a
+                    target={'_blank'}
+                    className={s.projectLink}
+                    href={props.link}
+                    onMouseEnter={onMouseEnterHandler}
+                    onMouseLeave={onMouseLeaveHandler} rel="noreferrer"
+                >
                     View
                 </a>
             </div>
