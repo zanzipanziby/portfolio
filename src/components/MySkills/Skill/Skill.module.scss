@@ -7,14 +7,13 @@
     margin-bottom: 2em;
     padding: 2em;
     width: 35vw;
-    min-width: 300px;
     background-color: $bgColorSecondary;
     @media screen and (max-width: $mediaWidthSkillsAndMenu){
         width: 90vw;
     }
     @media screen and (max-width: $mediaWidthMobile){
         padding: 2em 1em;
-        width: 100%;
+        width: 95vw;
     }
 }
 .iconContainer {
