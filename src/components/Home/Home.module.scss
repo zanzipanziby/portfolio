@@ -3,8 +3,16 @@
 
 
 .home {
+  position: relative;
   @include pageBg($bgColorSecondary);
-
+  .particles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .3;
+  }
   .contentContainer {
     @include container();
     display: flex;
@@ -23,10 +31,10 @@
       background-repeat: no-repeat;
       font-size: 2.5em;
       text-shadow: 1px 1px 10px $bgColorPrimary;
-      @media screen and (max-width: $mediaWidthTablet){
+      @media screen and (max-width: $mediaWidthTablet) {
         justify-content: start;
       }
-      @media screen and (max-width: $mediaWidthSkillsAndMenu ) {
+      @media screen and (max-width: $mediaWidthSkillsAndMenu) {
         justify-content: start;
         background-size: 600px;
         //min-height: 640px;
