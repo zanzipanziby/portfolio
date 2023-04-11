@@ -32,7 +32,7 @@ export const ParticlesContainer = (props: {classname:string}) => {
                         value: "000000FF",
                     },
                 },
-                fullScreen: false,
+                fullScreen:true,
                 fpsLimit: 120,
                 interactivity: {
                     events: {

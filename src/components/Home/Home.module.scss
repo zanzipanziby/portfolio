@@ -5,6 +5,7 @@
 .home {
   position: relative;
   @include pageBg($bgColorSecondary);
+
   .particles {
     position: absolute;
     top: 0;
@@ -13,6 +14,7 @@
     left: 0;
     opacity: .3;
   }
+
   .contentContainer {
     @include container();
     display: flex;
@@ -20,12 +22,13 @@
     align-items: center;
 
     .mainTextContainer {
+      position: relative;
       display: flex;
       width: 100%;
       flex-direction: column;
       justify-content: center;
-      min-height: 100vh;
-      background-image: url("../../assets/jpg/Photo.png");
+      min-height: 101vh;
+      background-image: url("../../assets/jpg/Photo2.png");
       background-size: contain;
       background-position: bottom right;
       background-repeat: no-repeat;
@@ -33,24 +36,20 @@
       text-shadow: 1px 1px 10px $bgColorPrimary;
       @media screen and (max-width: $mediaWidthTablet) {
         justify-content: start;
+
+        //min-height: 640px;
+        font-size: 1.5em;
+        padding-top: 20%;
       }
       @media screen and (max-width: $mediaWidthSkillsAndMenu) {
         justify-content: start;
-        background-size: 600px;
-        //min-height: 640px;
-        font-size: 1.5em;
-        padding-top: 3.5em;
       }
       @media screen and (max-width: $mediaWidthMobile) {
-
         font-size: 1em;
-
-        background-size: 400px;
         background-position: bottom;
       }
 
       .hello {
-
         color: $textColorSecondary;
         background-image: $bgColorPrimary;
       }

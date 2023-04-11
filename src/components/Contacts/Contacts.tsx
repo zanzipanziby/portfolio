@@ -4,13 +4,20 @@ import {Title} from "../Title/Title";
 import {Form} from "./Form/Form";
 import {PhotoContainer} from "../../common/components/PhotoContainer/PhotoContainer";
 
+
 export const Contacts = () => {
+
     return (
         <div className={s.pageWrapper}>
-            <div className={s.contentContainer}><Title title={"Contact Me"} titleRepeat={"Contacts"}/>
+
+
+            <div className={s.contentContainer}>
+                <Title title={"Contact Me"} titleRepeat={"Contacts"}/>
+
+
                 <div className={s.contactsContainer}>
-                    <PhotoContainer/>
-                    <Form/>
+                        <PhotoContainer/>
+                        <Form/>
                 </div>
             </div>
         </div>

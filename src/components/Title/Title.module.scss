@@ -8,17 +8,22 @@
   justify-content: center;
   align-items: center;
   padding: 6em;
+  margin-bottom: 3em;
+
   .title {
     font-size: 3em;
+
+
   }
   .titleRepeat {
     position: absolute;
     font-size: 7em;
-    opacity: .1;
     bottom: 0;
     font-weight: 900;
+    opacity: .1;
+
   }
   @media screen and (max-width: $mediaWidthSkillsAndMenu) {
-    font-size: .5em;
+    font-size: .6em;
   }
 }

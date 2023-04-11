@@ -8,8 +8,10 @@
     @include container();
 
     .contactsContainer {
+      position: relative;
       display: flex;
       justify-content: space-between;
+      align-items: end;
       @media screen and (max-width: $mediaWidthSkillsAndMenu) {
         flex-direction: column;
         align-items: center;

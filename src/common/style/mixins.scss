@@ -1,8 +1,11 @@
 @import "variables";
 
 @mixin container() {
-  max-width: 80%;
+  max-width: 75%;
   margin: 0 auto;
+  @media screen and (max-width: $mediaWidthProjectsPage ){
+    max-width: 90%;
+  }
   @media screen and (max-width: $mediaWidthMobile) {
     max-width: 95%;
   }

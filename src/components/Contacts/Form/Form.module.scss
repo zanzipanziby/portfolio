@@ -2,15 +2,17 @@
 
 .form {
   display: flex;
-  width: 70vw;
+  width: 40vw;
   flex-direction: column;
   background: #e0dddd;
   align-items: center;
   justify-content: space-between;
+  padding: 3em 2em;
   @media screen and (max-width: $mediaWidthSkillsAndMenu) {
     width: 100%;
   }
-  padding: 3em 2em;  input, textarea {
+
+  input, textarea {
     width: 100%;
     margin: 1em;
     padding: .5em;
@@ -24,10 +26,11 @@
   }
   button {
     background-color: $textColorSecondary;
+    margin-top: 1em;
     cursor: pointer;
     font-weight: 600;
     font-size: 1em;
-    padding: .5em 1em;
+    padding: 1em 1.5em;
 
     border-radius: 3em;
     text-transform: uppercase;

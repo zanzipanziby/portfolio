@@ -5,7 +5,12 @@
   display: flex;
   flex-direction: column;
   background-color: $bgColorPrimary;
+  width: 36vw;
   margin-bottom: 2em;
+  @media screen and (max-width: $mediaWidthProjectsPage){
+   width: 90vw;
+  }
+}
 
   .projectLogoContainer {
     display: flex;
@@ -43,8 +48,9 @@
   .projectDescriptionContainer {
     text-align: center;
     padding: 1em;
+
   }
-}
+
 
 
 

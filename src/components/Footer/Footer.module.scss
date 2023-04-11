@@ -3,6 +3,7 @@
 
 .pageWrapper {
   @include pageBg($bgColorSecondary);
+  position: relative;
 
   .contentContainer {
     @include container();
