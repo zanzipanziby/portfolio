@@ -51,7 +51,7 @@ export const MyProjects = () => {
     })
 
     return (
-        <div className={s.myProjectsWrapper}>
+        <div className={s.myProjectsWrapper} id={"projects"}>
             <div className={s.contentContainer}>
                 <Title title={"My Projects"} titleRepeat={"Projects"}/>
                 <div className={s.myProjectsContainer}>
