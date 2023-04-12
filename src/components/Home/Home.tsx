@@ -10,7 +10,7 @@ export const Home = () => {
 
     return (
 
-        <div className={s.home}>
+        <div className={s.home} id={"home"}>
             <ParticlesContainer classname={s.particles}/>
 
             <div className={s.contentContainer}>

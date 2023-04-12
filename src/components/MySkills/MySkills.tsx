@@ -82,7 +82,7 @@ export const MySkills = () => {
     })
     return (
 
-        <div className={s.mySkillsWrapper}>
+        <div className={s.mySkillsWrapper} id={"skills"}>
 
 
             <div className={s.contentContainer}>

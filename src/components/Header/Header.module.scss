@@ -21,13 +21,16 @@
 
       & li {
         margin: 1em 3em 1em 0;
-
-        & a:hover {
+        a{
+          cursor: pointer;
+        }
+        a:hover {
           border-bottom: 2px solid #ffbd39;
         }
 
-        & a:active {
+        .active {
           color: #ffbd39;
+
         }
       }
     }

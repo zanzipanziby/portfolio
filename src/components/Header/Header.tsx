@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import s from "./Header.module.scss"
 import {GiHamburgerMenu} from "react-icons/gi";
+import {Link} from "react-scroll";
 
 export const Header = () => {
     const [isActive,setIsActive] = useState(false)
@@ -12,16 +13,24 @@ export const Header = () => {
             <nav className={s.contentContainer}>
                 <ul className={!isActive ? s.nav : s.nav + ' ' + s.burgerNav}>
                     <li>
-                        <a href={"#"}>Home</a>
+                        <Link activeClass={s.active} to={"home"} spy smooth offset={1} duration={500}>
+                            Home
+                        </Link>
                     </li>
                     <li>
-                        <a href={"#"}>Skills</a>
+                        <Link activeClass={s.active} to={"skills"} spy smooth offset={1} duration={500}>
+                            Skills
+                        </Link>
                     </li>
                     <li>
-                        <a href={"#projects"}>Project</a>
+                        <Link activeClass={s.active} to={"projects"} spy smooth offset={1} duration={500}>
+                            Project
+                        </Link>
                     </li>
                     <li>
-                        <a href={"#"}>Contacts</a>
+                        <Link activeClass={s.active} to={"contacts"} spy smooth offset={1} duration={500}>
+                            Contacts
+                        </Link>
                     </li>
                 </ul>
 

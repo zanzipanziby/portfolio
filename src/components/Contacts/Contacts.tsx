@@ -8,7 +8,7 @@ import {PhotoContainer} from "../../common/components/PhotoContainer/PhotoContai
 export const Contacts = () => {
 
     return (
-        <div className={s.pageWrapper}>
+        <div className={s.pageWrapper} id={"contacts"}>
 
 
             <div className={s.contentContainer}>
