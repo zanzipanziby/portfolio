@@ -1,6 +1,8 @@
 import React from 'react';
 import s from "./Skill.module.scss"
-import {Fade} from "react-awesome-reveal";
+import Tilt from 'react-parallax-tilt'
+
+
 
 
 type SkillPropsType = {
@@ -9,14 +11,19 @@ type SkillPropsType = {
     icon: JSX.Element
 }
 export const Skill = (props: SkillPropsType) => {
+
     return (
-        <div className={s.skillWrapper}>
+
+        <Tilt glareEnable glarePosition="all" glareBorderRadius={"0"} scale={1.1} transitionSpeed={2500}>
+            <div className={s.skillWrapper}>
                 <div className={s.iconContainer}>{props.icon}</div>
                 <div className={s.textContainer}>
                     <h4>{props.title}</h4>
                     <p>{props.description}</p>
                 </div>
-        </div>
+            </div>
+        </Tilt>
+
     );
 };
 

@@ -7,7 +7,7 @@ export const Footer = () => {
             <div className={s.contentContainer}>
                 <footer className={s.footer}>
 
-                    <p>Copyright ©2023 All rights reserved</p>
+                    <p>Copyright © 2023 All rights reserved</p>
                 </footer>
 
             </div>

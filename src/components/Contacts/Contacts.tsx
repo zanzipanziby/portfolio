@@ -3,6 +3,7 @@ import s from './Contacts.module.scss'
 import {Title} from "../Title/Title";
 import {Form} from "./Form/Form";
 import {PhotoContainer} from "../../common/components/PhotoContainer/PhotoContainer";
+import {Fade} from "react-awesome-reveal";
 
 
 export const Contacts = () => {
@@ -16,8 +17,12 @@ export const Contacts = () => {
 
 
                 <div className={s.contactsContainer}>
+                    <Fade direction={"right"}>
                         <PhotoContainer/>
+                    </Fade>
+                    <Fade direction={"left"}>
                         <Form/>
+                    </Fade>
                 </div>
             </div>
         </div>

@@ -8,6 +8,12 @@
     padding: 2em;
     width: 35vw;
     background-color: $bgColorSecondary;
+    &:hover {
+        background-color: $textColorSecondary;
+        * {
+            color: $bgColorSecondary;
+        }
+    }
     @media screen and (max-width: $mediaWidthSkillsAndMenu){
         width: 90vw;
     }
@@ -15,10 +21,10 @@
         padding: 2em 1em;
         width: 95vw;
     }
-}
-.iconContainer {
-    width: 100px;
-    height: 100px;
-    font-size: 2em;
-    color: $textColorSecondary;
+    .iconContainer {
+        width: 100px;
+        height: 100px;
+        font-size: 2em;
+        color: $textColorSecondary;
+    }
 }

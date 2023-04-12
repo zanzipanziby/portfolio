@@ -17,22 +17,22 @@ export const Header = () => {
             <nav className={s.contentContainer}>
                 <ul className={!isActive ? s.nav : s.nav + ' ' + s.burgerNav} onBlur={onBlurHandler}>
                     <li>
-                        <Link activeClass={s.active} to={"home"} spy smooth offset={1} duration={500}>
+                        <Link activeClass={s.active} to={"home"} spy smooth offset={0} duration={500}>
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link activeClass={s.active} to={"skills"} spy smooth offset={1} duration={500}>
+                        <Link activeClass={s.active} to={"skills"} spy smooth offset={0} duration={500}>
                             Skills
                         </Link>
                     </li>
                     <li>
-                        <Link activeClass={s.active} to={"projects"} spy smooth offset={1} duration={500}>
+                        <Link activeClass={s.active} to={"projects"} spy smooth offset={0} duration={500}>
                             Project
                         </Link>
                     </li>
                     <li>
-                        <Link activeClass={s.active} to={"contacts"} spy smooth offset={1} duration={500}>
+                        <Link activeClass={s.active} to={"contacts"} spy smooth offset={0} duration={500}>
                             Contacts
                         </Link>
                     </li>

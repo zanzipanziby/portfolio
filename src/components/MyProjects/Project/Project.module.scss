@@ -7,49 +7,68 @@
   background-color: $bgColorPrimary;
   width: 36vw;
   margin-bottom: 2em;
-  @media screen and (max-width: $mediaWidthProjectsPage){
-   width: 90vw;
+  @media screen and (max-width: $mediaWidthProjectsPage) {
+    width: 90vw;
   }
-}
 
-  .projectLogoContainer {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    height: 350px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  &:hover {
+    .projectDescriptionContainer {
+      background-color: $textColorSecondary;
+      color: $bgColorSecondary;
+      .projectTitle span {
+        border-bottom: 3px solid $bgColorSecondary ;
 
-    .shading {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .projectLink {
-      display: block;
-      font-weight: 600;
-      background-color: rgba(16, 16, 16, 0.67);
-      padding: 1em 3em;
-      border-radius: 2em;
-      z-index: 1;
-
-      &:hover {
-        color: $textColorSecondary;
       }
     }
   }
+}
 
-  .projectDescriptionContainer {
-    text-align: center;
-    padding: 1em;
+.projectLogoContainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
+  .shading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
   }
+
+  .projectLink {
+    display: block;
+    font-weight: 600;
+    background-color: rgba(16, 16, 16, 0.67);
+    padding: 1em 3em;
+    border-radius: 2em;
+    z-index: 1;
+
+    &:hover {
+      color: $textColorSecondary;
+    }
+  }
+}
+
+.projectDescriptionContainer {
+  text-align: center;
+  padding: 1em;
+
+  .projectTitle span {
+    border-bottom: 3px solid $textColorSecondary ;
+    font-size: 1.3em;
+    padding-bottom: 5px;
+  }
+  .projectDescription {
+    margin-top: 10px;
+  }
+}
 
 
 

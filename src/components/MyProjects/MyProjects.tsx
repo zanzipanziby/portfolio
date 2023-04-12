@@ -5,6 +5,7 @@ import todo from '../../assets/jpg/projects/Todo.jpg'
 import social from '../../assets/jpg/projects/socialNetwork.png'
 import {Title} from "../Title/Title";
 import {Fade} from "react-awesome-reveal";
+import Tilt from "react-parallax-tilt";
 
 
 type MyProjectType = {
@@ -23,7 +24,7 @@ export const MyProjects = () => {
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit." +
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
             background: todo,
-            link:"https://zanzipanziby.github.io/todolist-redux-handmade"
+            link: "https://zanzipanziby.github.io/todolist-redux-handmade"
         },
         {
             id: "2",
@@ -32,20 +33,22 @@ export const MyProjects = () => {
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit." +
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
             background: social,
-            link:"https://zanzipanziby.github.io/samurai-way-again"
+            link: "https://zanzipanziby.github.io/samurai-way-again"
         },
     ];
 
     const myProjectRender = myProjects.map(p => {
         return (
             <Fade direction={"up"} triggerOnce>
-                <Project
-                key={p.id}
-                title={p.title}
-                description={p.description}
-                background={p.background}
-                link={p.link}
-            />
+                <Tilt scale={1.1} tiltEnable={false}>
+                    <Project
+                        key={p.id}
+                        title={p.title}
+                        description={p.description}
+                        background={p.background}
+                        link={p.link}
+                    />
+                </Tilt>
             </Fade>
         )
     })
