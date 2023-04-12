@@ -17,10 +17,10 @@ export const Contacts = () => {
 
 
                 <div className={s.contactsContainer}>
-                    <Fade direction={"right"}>
+                    <Fade direction={"right"} triggerOnce>
                         <PhotoContainer/>
                     </Fade>
-                    <Fade direction={"left"}>
+                    <Fade direction={"left"} triggerOnce>
                         <Form/>
                     </Fade>
                 </div>
