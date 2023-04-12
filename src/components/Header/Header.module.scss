@@ -2,7 +2,7 @@
 @import "../../common/style/variables";
 
 .navContainer {
-  background-color: rgba(0, 0, 0, 0.78);
+  background-color: rgba(0, 0, 0, 0.89);
   position: fixed;
   right: 0;
   left: 0;
@@ -16,7 +16,14 @@
     .nav {
       display: flex;
       @media screen and (max-width: $mediaWidthSkillsAndMenu) {
-        display: none;
+        position: absolute;
+        padding-left: 5%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        transform: translate(0, -100%);
+        background-color: rgba(0, 0, 0, 0.89);
+        transition :transform .5s ;
       }
 
       & li {
@@ -35,8 +42,11 @@
       }
     }
     .burgerNav{
-      display: flex;
-      flex-direction: column;
+      @media screen and (max-width: $mediaWidthSkillsAndMenu) {
+        height: auto;
+      transform: translate(0, 0);
+      transition :transform .5s ;
+    }
     }
     .burger{
       display: none;
@@ -45,9 +55,13 @@
         width: 100%;
         justify-content: end;
         margin: 1em 3em 1em 0;
-        cursor: pointer;
-        &:active{
-          color: $textColorSecondary;
+        z-index: 2;
+        .burgerButton{
+          cursor: pointer;
+          &:active{
+            color: $textColorSecondary;
+        }
+
       }
       }
     }

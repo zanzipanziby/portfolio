@@ -8,10 +8,14 @@ export const Header = () => {
     const onClickHandler = () => {
         setIsActive(!isActive)
     }
+
+    const onBlurHandler = () => {
+        setIsActive(false)
+    }
     return (
         <header className={s.navContainer}>
             <nav className={s.contentContainer}>
-                <ul className={!isActive ? s.nav : s.nav + ' ' + s.burgerNav}>
+                <ul className={!isActive ? s.nav : s.nav + ' ' + s.burgerNav} onBlur={onBlurHandler}>
                     <li>
                         <Link activeClass={s.active} to={"home"} spy smooth offset={1} duration={500}>
                             Home
@@ -35,7 +39,9 @@ export const Header = () => {
                 </ul>
 
              {/*<LinksToSocialNetworks/>*/}
-                <div className={s.burger} onClick={onClickHandler}><GiHamburgerMenu/></div>
+                <div className={s.burger} >
+                    <GiHamburgerMenu onClick={onClickHandler} className={s.burgerButton}/>
+                </div>
             </nav>
         </header>
     );
