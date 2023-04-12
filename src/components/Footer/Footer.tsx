@@ -8,6 +8,7 @@ export const Footer = () => {
                 <footer className={s.footer}>
 
                     <p>Copyright © 2023 All rights reserved</p>
+                    <p>Designed by Evgeniy Kondratenko</p>
                 </footer>
 
             </div>
