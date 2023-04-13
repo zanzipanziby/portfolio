@@ -4,7 +4,7 @@ import s from "./MyProjects.module.scss"
 import todo from '../../assets/jpg/projects/Todo.jpg'
 import social from '../../assets/jpg/projects/socialNetwork.png'
 import {Title} from "../Title/Title";
-import {Fade} from "react-awesome-reveal";
+import {Fade} from "react-reveal";
 import Tilt from "react-parallax-tilt";
 
 
@@ -39,7 +39,7 @@ export const MyProjects = () => {
 
     const myProjectRender = myProjects.map(p => {
         return (
-            <Fade direction={"up"} triggerOnce>
+            <Fade bottom>
                 <Tilt scale={1.1} tiltEnable={false}>
                     <Project
                         key={p.id}

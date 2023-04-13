@@ -9,7 +9,7 @@ import {VscDebugAll} from "react-icons/vsc";
 import {SiRedux} from "react-icons/si";
 import {BsGit} from "react-icons/bs";
 import {Title} from "../Title/Title";
-import {Fade} from "react-awesome-reveal";
+import {Fade} from "react-reveal";
 
 
 type SkillType = {
@@ -74,7 +74,7 @@ export const MySkills = () => {
     const mySkillsRender = mySkills.map(s => {
         return (
 
-            <Fade direction={"up"} triggerOnce>
+            <Fade bottom>
                 <Skill key={s.id} icon={s.icon} title={s.title} description={s.description}/>
             </Fade>
 
